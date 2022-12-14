@@ -1,0 +1,122 @@
+#chatbox{
+    width: 20rem;
+    height: 25.7rem;
+    overflow: hidden;
+    border-radius: 3%;
+}
+.chat-header{
+    width: 20rem;
+    height: 15%;
+    background-image: linear-gradient(to right, #0654d3 , #09C6F9);
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-align{
+    display: flex;
+    text-transform: capitalize;
+}
+.logout:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.chat-body{
+    position: relative;
+    background-color:white;
+    height: 70%;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-weight: bold;
+    color: rgb(34, 12, 12);
+}
+.refresh-icon{
+    position: fixed;
+    right: 0%;
+    bottom: 1%;
+    z-index: 1;
+    color: rgb(0, 119, 255);
+}
+.refresh-icon{
+    cursor: pointer;
+}
+.chat-started{
+    position: relative;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 1rem;
+    max-height: 233px;
+    overflow-y: auto;
+}
+.welcome-message{
+    font-size: small;
+    color: #0d4d0d;
+    text-align: center;
+}
+.person{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.admin{
+    background-color: rgb(223, 223, 223);
+    border-radius: 0 .75rem .75rem .75rem;
+    box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, .05);
+    word-wrap: break-word;
+    padding-left: 0.3rem;
+    width: 12rem;
+}
+.user{
+    align-self: flex-end;
+    background-image: linear-gradient(to right, #0654d3 , #09C6F9);
+    color: white;
+    border-radius: .75rem 0 .75rem .75rem;
+    padding-left: 0.3rem;
+    width: 12rem;
+    word-wrap: break-word;
+}
+.chat-input{
+    background-color: white;
+    height: 5%;
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+.input-para{
+    width: 13rem;
+    border: none;
+}
+.input-para:focus{
+    outline: none;
+}
+.input-send{
+    color: #0654d3;
+    border: none;
+    background-color: inherit;
+    font-weight: bolder;
+    font-size: x-large;
+}
+.input-send:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.chat-credit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    font-size: x-small;
+    color: gray;
+}
