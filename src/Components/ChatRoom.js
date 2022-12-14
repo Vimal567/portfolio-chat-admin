@@ -11,7 +11,7 @@ const ChatRoom = ({name}) => {
     const [userData, setUserData] = useState([]);
     const [newMessage, setNewMessage] = useState("");
     const [loading, setLoading] = useState(true);
-    const messagesEnd = useRef(null)
+    const messagesEnd = useRef(null);
 
     const fetchData = async() => {
         try{
@@ -23,7 +23,6 @@ const ChatRoom = ({name}) => {
             console.log(error);
         }
     }
-
 
     const handleNewMessage = (event) => {
         const message = event.target.value;
@@ -48,7 +47,7 @@ const ChatRoom = ({name}) => {
         try{
             await axios.patch("https://chat-box.onrender.com/", newObj);
         }catch(error){
-            console.log(error)
+            console.log(error);
         }
         const oldMessage = userData.message;
         newObj = {
@@ -69,11 +68,11 @@ const ChatRoom = ({name}) => {
     }
 
     const scrollToBottom = () => {
-        messagesEnd.current?.scrollIntoView({ behavior: "smooth" })
+        messagesEnd.current?.scrollIntoView({ behavior: "smooth" });
     };
 
     useEffect(() => {
-        scrollToBottom()
+        scrollToBottom();
     }, [userData]);
 
     useEffect(() => {
@@ -96,7 +95,8 @@ const ChatRoom = ({name}) => {
                         userData.message.map((item, index) => {
                             return <div key={index} className={item.person === "admin" ? "admin" : "user"}>
                                 <span className="person">
-                                    {item.person === "admin" ? <GiDevilMask /> : <AiOutlineUser />}{item.person === "admin" ? "admin:" : `${name}:`}
+                                    {item.person === "admin" ? <GiDevilMask /> : <AiOutlineUser />}
+                                    {item.person === "admin" ? "admin:" : `${name}:`}
                                 </span><br />
                                 {item.text}
                                 <div ref={messagesEnd} />
@@ -108,7 +108,9 @@ const ChatRoom = ({name}) => {
             </div>
             {<div className="chat-input">
                     <input value={newMessage} className="input-para" placeholder="Type your message here..." onChange={handleNewMessage} />
-                    <button title="send"  value={newMessage} className="input-send" onClick={handleMessageSubmit}>{">"}</button>
+                    <button title="send"  value={newMessage} className="input-send" onClick={handleMessageSubmit}>
+                        {">"}
+                    </button>
             </div>
             }
             <div className="chat-credit">chat box created by vimal</div>
