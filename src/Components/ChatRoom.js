@@ -37,7 +37,7 @@ const ChatRoom = ({name}) => {
         const name = userData.name;
         const newMessageObj = {
             "text" : message,
-            "person": "user",
+            "person": "admin",
             "line": newLine
         };
         let newObj = {
